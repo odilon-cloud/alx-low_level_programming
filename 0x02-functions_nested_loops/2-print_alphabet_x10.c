@@ -1,26 +1,15 @@
-#include "holberton.h"
+#include"main.h"
 
 /**
- * print_alphabet_x10 - print alphabet
- *
- * Return: always 0
- */
-void print_alphabet_x10(void)
+ * print_alphabet -function to print
+ *                 the alphabet a - z
+*/
+
+void print_alphabet(void)
 {
-int alphabet; /*Declaring statements*/
-int count;
+	int alpha;
 
-count = 0;
-while (count < 10) /*Start while */
-{
-for (alphabet = 'a' ; alphabet <= 'z'; alphabet++) /*start for*/
-{
-_putchar(alphabet);
-} /*end for*/
-
-count++;
-_putchar('\n'); /*new line*/
-} /*end while*/
-
-
+	for (alpha = 'a'; alpha <= 'z'; ++alpha)
+		_putchar(ch);
+	_putchar('\n');
 }

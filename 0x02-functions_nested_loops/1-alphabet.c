@@ -1,20 +1,21 @@
-#include "holberton.h"
+#include"main.h"
+
 /**
- * print_alphabet - print alphabert lowercase
+ * main - Entry point
  *
- * Return: nothing
- */
+ * Description: prints _putchar using putchar prototype
+ *
+ * Return: Always 0 (Success)
+*/
 
-void print_alphabet(void)
+int main(void)
 {
-char letter; /*Decarling statement*/
+	char str[] = "_putchar";
+	int ch;
 
-/*for letter*/
-for (letter = 'a'; letter <= 'z'; letter++)
-{
-_putchar(letter);/*print letter*/
-}
+	for (ch = 0; ch < 8; ++ch)
+		_putchar(str[ch]);
+	_putchar('\n');
 
-_putchar('\n'); /*new line*/
-
+	return (0);
 }

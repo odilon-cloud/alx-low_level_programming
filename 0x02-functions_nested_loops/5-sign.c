@@ -1,8 +1,8 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * print_sign - return 0 letter not lowercase, 1 letter lowercase
  *
- *@n: The int to print
+ *The int to print
  * Return: Returns 1 (print +) n>0, returns 0 (is 0) n=0, returns -1 (-) n<0
  */
 int print_sign(int n)
