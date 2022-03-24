@@ -1,42 +1,35 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *print_buffer - Print a buffer 10 bytes per line.
- *@b: Buffer address.
- *@size: Number of characters to be printed.
+ * print_number - prints an integer.
+ * @n: input integer.
+ * Return: no return.
  */
-void print_buffer(char *b, int size)
+void print_number(int n)
 {
-	int j, i, l;
+	unsigned int c, b, count;
 
-	if (size <= 0)
-		printf("\n");
+	if (n < 0)
+	{
+		_putchar(45);
+		c = n * -1;
+	}
 	else
 	{
-		for (j = 0; j < size; j += 10)
-		{
-			printf("%.8x:", j);
-			for (i = j; i < j + 10; i++)
-			{
-				if (i % 2 == 0)
-					printf(" ");
-				if (i < size)
-					printf("%.2x", *(b + i));
-				else
-					printf("  ");
-			}
-			printf(" ");
-			for (l = j; l < j + 10; l++)
-			{
-				if (l >= size)
-					break;
-				if (*(b + l) < 32 || *(b + l) > 126)
-					printf("%c", '.');
-				else
-					printf("%c", *(b + l));
-			}
-			printf("\n");
-		}
+		c = n;
+	}
+
+	b = c;
+	count = 1;
+
+	while (b > 9)
+	{
+		b /= 10;
+		count *= 10;
+	}
+
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((c / count) % 10) + 48);
 	}
 }
