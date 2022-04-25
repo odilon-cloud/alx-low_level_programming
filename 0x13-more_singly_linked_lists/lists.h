@@ -38,5 +38,4 @@ listint_t *find_listint_loop(listint_t *head);
 
 /*Helper functions*/
 int _putchar(char c);
-
 #endif
